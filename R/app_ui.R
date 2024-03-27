@@ -9,7 +9,7 @@ app_ui <- function(request) {
   fluidPage(
 
   shinyGovstyle::header("DLUHC ADD", "Analyst Skills Tool", logo="shinyGovstyle/images/moj_logo.png"),
-  banner("banner", "beta", 'This data was last updated on 15/12/2023'),
+  banner("banner", "beta", 'This data was last updated on 02/01/2024'),
   gov_layout(size = "full"
   ),
 
@@ -17,7 +17,7 @@ app_ui <- function(request) {
     sidebarPanel(
       selectizeInput("software", "Select Software", choices = c("Select Software","R", "Python", "SQL", "Excel", "PowerBI", "GitHub", "SPSS", "QGIS", "STATA"), multiple = FALSE),
       hr(),
-      selectizeInput("subskill", "Select Sub-Skill", choices = c("Select Skill",NULL), multiple = FALSE,),
+      selectizeInput("subskill", "Select Sub-Skill (optional)", choices = c("Select Skill",NULL), multiple = FALSE,),
       hr(),
       button_Input(inputId = "update", label = "Update", type = "start"),
     ),
